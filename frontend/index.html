@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth" class="card">
+        <h2>Welcome Back</h2>
+        
+        <div class="input-group">
+            <input id="username" type="text" placeholder="Username" autocomplete="off">
+            <input id="password" type="password" placeholder="Password">
+        </div>
+
+        <div class="btn-group">
+            <button class="secondary" onclick="register()">Register</button>
+            <button class="primary" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <div class="action-bar">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="card note-creator">
+            <h2>Add a Note</h2>
+            <div class="input-group">
+                <input id="title" type="text" placeholder="Note Title...">
+                <textarea id="content" rows="4" placeholder="Write your thoughts here..."></textarea>
+            </div>
+            <button class="primary" style="width: 100%;" onclick="createNote()">Save Note</button>
+        </div>
+
+        <div id="notes"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
